@@ -12,9 +12,17 @@
 
 <div class="content" role="main">
   <!-- Resources -->
-  <p> 
-    <gd-angular-pipes></gd-angular-pipes>
-    <app-employee-names></app-employee-names>
-  </p>
+    <p><gd-observable></gd-observable></p>
+    <p>Check the console for HttpClient Operations</p>
+    <p>Open dummy backend url <a href="http://localhost:3000/employees" target="_blank">http://localhost:3000/employees</a></p>
+    <p>1st: run the batch file to load backend</p>
+    <p>2nd: run the batch file to launch frontend</p>
+    <p>3rd: In case of port issues run windows batch to kill port</p>
+    <strong>View All Employees List</strong>
+    <span>
+      <ul class="list-group list-group-flush" *ngFor = "let emp of employees" >
+        <mark><li class="list-group-item list-group-item-action" >ID: {{ emp.id }}  AGE: {{emp.age}}  NAME: {{ emp.name }} </li> </mark>
+      </ul>
+    </span>
 </div>
-
+    
